@@ -36,16 +36,16 @@
 
 ## 🚀 Overview
 
-**Wepicrwal** ek powerful, lightweight aur fast **Python-based security tool** hai jo web applications aur servers ki security posture ko test karne ke liye design kiya gaya hai.
+**Wepicrwal** is a powerful, lightweight, and fast **Python-based security tool** designed to test the security posture of web applications and servers.
 
-Ye ek hi tool me combine karta hai:
+It combines all of the following into a single tool:
 - 🔌 Automated **TCP/UDP port scanning**
-- 🕷️ Common **web vulnerability detection** (XSS, SQL Injection, CSRF)
-- 📊 Ek **stunning, executive-ready HTML report** jo aap client ya team ke saath directly share kar sakein
+- 🕷️ Detection of common **web vulnerabilities** (XSS, SQL Injection, CSRF)
+- 📊 A **stunning, executive-ready HTML report** that you can share directly with a client or team
 
-Chahe aap ek pentester ho, bug bounty hunter ho, ya apni khud ki web app ki security check karna chahte ho — **Wepicrwal** aapko ek clean, fast aur readable report deta hai, bina kisi complex setup ke.
+Whether you're a pentester, a bug bounty hunter, or just want to check the security of your own web app — **Wepicrwal** gives you a clean, fast, and readable report without any complicated setup.
 
-> ⚠️ **Note:** Yeh tool sirf **authorized security testing** ke liye hai. Neeche diya gaya [Legal Disclaimer](#-legal-disclaimer) zaroor padhein.
+> ⚠️ **Note:** This tool is intended for **authorized security testing only**. Please make sure to read the [Legal Disclaimer](#-legal-disclaimer) below.
 
 ---
 
@@ -53,35 +53,35 @@ Chahe aap ek pentester ho, bug bounty hunter ho, ya apni khud ki web app ki secu
 
 | Feature | Description |
 |---|---|
-| 🔍 **Comprehensive Port Scanning** | TCP aur UDP ports ki deep scanning karke open services identify karta hai aur unke risk levels (`Safe`, `Moderate`, `Unsafe`, `Critical`) batata hai |
-| ⚡ **Web Vulnerability Checks** | Reflected XSS, error-based SQL Injection, aur CSRF token validation — sab ek jagah |
-| 🔒 **Mandatory Authorization Gate** | Built-in confirmation prompt jo accidental / unauthorized scanning ko rokta hai |
-| 📊 **Stunning HTML Reports** | Dark-themed, modern, mobile-responsive reports — summary cards + detailed findings |
-| 🧵 **Multithreaded Performance** | Threading ke through fast aur efficient scanning |
-| 🕒 **Timestamped Reports** | Har scan ki apni unique, timestamped report file — history maintain karna easy |
-| 🧩 **Modular Scan Modes** | Sirf ports, sirf vulnerabilities, ya dono — aapki marzi |
-| 🖥️ **Cross-Platform** | Linux, macOS aur Windows — sab par chalta hai (Python 3 ke saath) |
+| 🔍 **Comprehensive Port Scanning** | Performs deep scanning of TCP and UDP ports to identify open services and reports their risk levels (`Safe`, `Moderate`, `Unsafe`, `Critical`) |
+| ⚡ **Web Vulnerability Checks** | Reflected XSS, error-based SQL Injection detection, and CSRF token validation — all in one place |
+| 🔒 **Mandatory Authorization Gate** | Built-in confirmation prompt that prevents accidental / unauthorized scanning |
+| 📊 **Stunning HTML Reports** | Generates dark-themed, modern, mobile-responsive reports with summary cards and detailed findings |
+| 🧵 **Multithreaded Performance** | Uses threading for fast and efficient scanning |
+| 🕒 **Timestamped Reports** | Every scan produces its own unique, timestamped report file — making it easy to keep a history |
+| 🧩 **Modular Scan Modes** | Scan ports only, vulnerabilities only, or both — your choice |
+| 🖥️ **Cross-Platform** | Works on Linux, macOS, and Windows (with Python 3) |
 
 ### 🔥 Detailed Breakdown
 
 - 🌐 **Port Intelligence**
-  - Open/closed/filtered ports ka fast detection
-  - Har port ke liye risk classification, taaki aap priority decide kar sako
+  - Fast detection of open/closed/filtered ports
+  - Risk classification for each port so you can prioritize what to fix first
 
 - 🕸️ **Vulnerability Engine**
-  - **Reflected XSS** — URL parameters & form inputs ke through
+  - **Reflected XSS** — via URL parameters & form inputs
   - **SQL Injection (SQLi)** — error-based signature detection
-  - **CSRF** — POST forms me protection token analysis
+  - **CSRF** — protection token analysis on POST forms
 
 - 📈 **Reporting Engine**
   - Executive summary cards (total ports scanned, vulnerabilities found, risk score)
-  - Clean, shareable, dark-mode HTML output — client-ready
+  - Clean, shareable, dark-mode HTML output — ready to hand to a client
 
 ---
 
 ## 🛠️ Manual Step-by-Step Installation & Setup
 
-Apne local machine par is tool ko setup karne ke liye yeh steps follow karein:
+Follow these steps to set up the tool on your local machine:
 
 ### Step 1️⃣ — Clone the Repository
 
@@ -92,13 +92,13 @@ cd wepicrwal
 
 ### Step 2️⃣ — Verify Python Installation
 
-Check karein ki aapke system me Python 3 installed hai ya nahi:
+Check whether Python 3 is installed on your system:
 
 ```bash
 python3 --version
 ```
 
-Agar Python 3 install nahi hai, toh [official website](https://www.python.org/downloads/) se download kar lein.
+If Python 3 isn't installed, download it from the [official website](https://www.python.org/downloads/).
 
 ### Step 3️⃣ — (Recommended) Create a Virtual Environment
 
@@ -114,7 +114,7 @@ venv\Scripts\activate         # Windows
 pip install requests beautifulsoup4
 ```
 
-> 💡 Agar permission error aaye, toh `--user` flag use kar sakte hain:
+> 💡 If you run into a permission error, you can use the `--user` flag:
 > ```bash
 > pip install --user requests beautifulsoup4
 > ```
@@ -125,13 +125,13 @@ pip install requests beautifulsoup4
 chmod +x Wepicrwal.py
 ```
 
-✅ **Setup complete!** Ab aap tool run karne ke liye ready hain.
+✅ **Setup complete!** You're now ready to run the tool.
 
 ---
 
 ## 💻 Usage & Examples
 
-Tool ko run karne ke liye target URL ya domain pass karein:
+Pass a target URL or domain to run the tool:
 
 ```bash
 python3 Wepicrwal.py http://example.com
@@ -141,16 +141,16 @@ python3 Wepicrwal.py http://example.com
 
 | Command | Purpose |
 |---|---|
-| `python3 Wepicrwal.py target.com --ports-only` | Sirf **Port Scan** karta hai |
-| `python3 Wepicrwal.py http://target.com --vuln-only` | Sirf **Vulnerability Scan** karta hai |
-| `python3 Wepicrwal.py http://target.com -o my_custom_report.html` | Custom **HTML report name** deta hai |
-| `python3 Wepicrwal.py --help` | Saare available options dikhata hai |
+| `python3 Wepicrwal.py target.com --ports-only` | Runs **port scan only** |
+| `python3 Wepicrwal.py http://target.com --vuln-only` | Runs **vulnerability scan only** |
+| `python3 Wepicrwal.py http://target.com -o my_custom_report.html` | Sets a **custom HTML report name** |
+| `python3 Wepicrwal.py --help` | Shows all available options |
 
 ---
 
 ## 📸 Screenshots & Workflow
 
-> 📌 *Yahan par apne tool ke actual screenshots add karna na bhoolein — README aur bhi zyada attractive lagegi!*
+> 📌 *Don't forget to add your tool's actual screenshots here — it'll make the README even more attractive!*
 
 ```markdown
 ![Banner Preview](assets/banner-preview.png)
@@ -158,17 +158,17 @@ python3 Wepicrwal.py http://example.com
 ![HTML Report Sample](assets/report-sample.png)
 ```
 
-**Workflow kuch is tarah dikhta hai:**
+**The workflow looks something like this:**
 
-1. 🏁 **Banner & Authorization** — Tool start hote hi ASCII banner dikhayega aur target confirm karne ke liye legal disclaimer/authorization maangega
-2. 🔎 **Scanning** — TCP/UDP ports aur web forms test honge (progress live dikhega)
-3. 📄 **Report Generation** — Ek unique, timestamped HTML file generate hogi
+1. 🏁 **Banner & Authorization** — The tool displays its ASCII banner on startup and asks for a legal disclaimer/authorization confirmation for the target
+2. 🔎 **Scanning** — TCP/UDP ports and web forms are tested (with live progress shown)
+3. 📄 **Report Generation** — A unique, timestamped HTML file is generated
 
    ```
    wepicrwal_target_com_20260328.html
    ```
 
-4. 🎉 **Done!** — Report ko browser me open karke findings review karein
+4. 🎉 **Done!** — Open the report in your browser to review the findings
 
 ---
 
@@ -186,29 +186,29 @@ python3 Wepicrwal.py http://example.com
 
 ## 🤝 Contributing
 
-Contributions dil se welcome hain! 🎉
+Contributions are genuinely welcome! 🎉
 
-1. Repository ko **Fork** karein
-2. Ek naya branch banayein (`git checkout -b feature/amazing-feature`)
-3. Apne changes **Commit** karein (`git commit -m 'Add some amazing feature'`)
-4. Branch ko **Push** karein (`git push origin feature/amazing-feature`)
-5. Ek **Pull Request** open karein
+1. **Fork** the repository
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add some amazing feature'`)
+4. **Push** the branch (`git push origin feature/amazing-feature`)
+5. Open a **Pull Request**
 
 ---
 
 ## ⚠️ Legal Disclaimer
 
-> **Wepicrwal** ko sirf **educational purposes** aur **authorized penetration testing / security audits** ke liye banaya gaya hai.
+> **Wepicrwal** is built **strictly for educational purposes** and **authorized penetration testing / security audits**.
 >
-> Bina explicit written permission ke kisi bhi system par port scanning ya vulnerability testing karna **illegal** hai aur isse severe legal consequences ho sakte hain.
+> Performing port scanning or vulnerability testing on any system without explicit written permission is **illegal** and can lead to serious legal consequences.
 >
-> Developers is tool ke kisi bhi misuse ke zimmedaar **nahi** hain. Use responsibly. 🙏
+> The developers are **not responsible** for any misuse of this tool. Please use it responsibly. 🙏
 
 ---
 
 ## 📜 License
 
-Is project ko **MIT License** ke andar distribute kiya gaya hai — dekhein [`LICENSE`](LICENSE) file for more details.
+This project is distributed under the **MIT License** — see the [`LICENSE`](LICENSE) file for more details.
 
 ---
 
@@ -221,6 +221,6 @@ Is project ko **MIT License** ke andar distribute kiya gaya hai — dekhein [`LI
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](#)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](#)
 
-⭐ **Agar yeh project pasand aaya, toh ek Star zaroor dedein!** ⭐
+⭐ **If you liked this project, please consider giving it a Star!** ⭐
 
 </div>
