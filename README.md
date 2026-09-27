@@ -218,8 +218,8 @@ This project is distributed under the **MIT License** — see the [`LICENSE`](LI
 
 **Md Zishan Raza**
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](#)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](#)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zishanofficial17-eng)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-zishan-rz)
 
 ⭐ **If you liked this project, please consider giving it a Star!** ⭐
 
