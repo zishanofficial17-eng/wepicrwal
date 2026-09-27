@@ -86,7 +86,7 @@ Follow these steps to set up the tool on your local machine:
 ### Step 1️⃣ — Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/wepicrwal.git
+git clone https://github.com/zishanofficial17-eng/wepicrwal.git
 cd wepicrwal
 ```
 
